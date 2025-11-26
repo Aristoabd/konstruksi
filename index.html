@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teman Cerita - Safe Space</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="chat-wrapper">
+        <div class="chat-container">
+            <header class="chat-header">
+                <div class="logo-area">
+                    <div class="logo">TC</div>
+                </div>
+                <div class="header-info">
+                    <h2>Teman Cerita</h2>
+                    <span class="status">Ruang Aman & Terpercaya</span>
+                </div>
+            </header>
+
+            <div class="chat-box" id="chat-box">
+                <div class="date-divider">Hari ini</div>
+                
+                <div class="message bot-message">
+                    <p>Halo. Saya di sini untuk mendengarkanmu tanpa menghakimi. Bagaimana perasaanmu saat ini?</p>
+                    <span class="time">Sekarang</span>
+                </div>
+            </div>
+
+            <div class="chat-input-area">
+                <input type="text" id="user-input" placeholder="Tuliskan ceritamu di sini..." autocomplete="off">
+                <button id="send-btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
