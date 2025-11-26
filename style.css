@@ -1,24 +1,26 @@
 :root {
-    /* --- PALET WARNA BARU (LEBIH TERANG/BRIGHT) --- */
-
-    /* Biru Cerah (Langit): Memberikan kesan ruang aman yang luas & tenang */
-    /* Menggantikan biru yang terlalu 'corporate' menjadi lebih friendly */
-    --primary-blue: #64B5F6;       /* Tombol & Aksen Utama */
-    --header-gradient-1: #90CAF9;  /* Gradasi Header Kiri */
-    --header-gradient-2: #64B5F6;  /* Gradasi Header Kanan */
+    /* --- PALET WARNA BARU (HEALING GREEN) --- */
     
-    /* Hijau Mint: Kesan healing yang segar & ringan di mata */
-    --bot-bg: #E3F2FD;             /* Background pesan bot (Biru-putih sangat muda) */
-    --bot-text: #2c3e50;           /* Teks bot (Abu tua agar kontras) */
+    /* HIJAU (Healing & Growth): Menyeimbangkan emosi & mengurangi stres visual */
+    --primary-green: #66BB6A;      /* Warna Utama (Tombol & Ikon) */
+    --header-grad-1: #81C784;      /* Gradasi Hijau Muda */
+    --header-grad-2: #43A047;      /* Gradasi Hijau Daun */
+    
+    /* BUBBLE BOT: Hijau Sangat Muda */
+    /* Hijau muda membantu menenangkan pikiran [cite: 8, 11] */
+    --bot-bg: #E8F5E9;             
+    --bot-text: #1B5E20;           /* Teks hijau tua agar kontras & terbaca */
 
-    /* Pink Blush: Kehangatan emosional yang lembut */
-    --user-bg: #FFCDD2;            /* Background pesan user (Pink muda) */
-    --user-text: #5D4037;          /* Teks user (Coklat tua lembut, bukan hitam) */
+    /* BUBBLE USER: Pink Pastel Tetap Dipertahankan */
+    /* Pink memberi kesan 'warm emotional support' & empati [cite: 15, 16] */
+    --user-bg: #FFCDD2;            
+    --user-text: #5D4037;          /* Coklat tua (kombinasi hijau+coklat = membumi/grounding)  */
 
-    /* Putih & Netral: Minimalis & Bersih */
-    --bg-app: #F5F7FA;             /* Latar belakang luar aplikasi */
-    --chat-bg: #FFFFFF;            /* Latar belakang area chat */
-    --input-bg: #FAFAFA;           /* Background kolom ketik */
+    /* NETRAL: Putih (Clean Minimalist) */
+    /* Putih memberi kesan ruang terbuka & tidak membebani emosi [cite: 20, 21] */
+    --bg-app: #F1F8E9;             /* Latar belakang aplikasi (Hijau pupus sangat tipis) */
+    --chat-bg: #FFFFFF;            /* Area chat putih bersih */
+    --input-bg: #FAFAFA;
 }
 
 /* Reset & Font */
@@ -26,7 +28,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Nunito', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Nunito', sans-serif;
 }
 
 body {
@@ -37,7 +39,6 @@ body {
     align-items: center;
 }
 
-/* Container Utama */
 .chat-wrapper {
     width: 100%;
     height: 100%;
@@ -47,45 +48,45 @@ body {
     padding: 20px;
 }
 
+/* BOX UTAMA */
 .chat-container {
     width: 100%;
-    max-width: 400px; /* Sedikit lebih ramping agar elegan */
+    max-width: 400px;
     height: 85vh;
     background: var(--chat-bg);
     border-radius: 25px;
-    /* Shadow yang sangat lembut (glowing effect) */
-    box-shadow: 0 15px 35px rgba(100, 181, 246, 0.15); 
+    /* Shadow hijau lembut untuk kesan 'floating' */
+    box-shadow: 0 15px 35px rgba(76, 175, 80, 0.15); 
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    border: 1px solid #F0F0F0;
+    border: 1px solid #E0E0E0;
 }
 
-/* HEADER: Lebih Terang & Gradasi Halus */
+/* HEADER: Nuansa Hijau Alam */
 .chat-header {
-    background: linear-gradient(135deg, var(--header-gradient-1), var(--header-gradient-2));
+    background: linear-gradient(135deg, var(--header-grad-1), var(--header-grad-2));
     padding: 15px 20px;
     display: flex;
     align-items: center;
     gap: 12px;
     color: white;
-    /* Shadow header tipis */
-    box-shadow: 0 4px 15px rgba(100, 181, 246, 0.2); 
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.2);
     z-index: 10;
 }
 
 .logo {
     width: 40px;
     height: 40px;
-    background: rgba(255, 255, 255, 0.9); /* Putih agak transparan */
-    color: var(--primary-blue);
+    background: rgba(255, 255, 255, 0.95);
+    color: var(--header-grad-2); /* Logo berwarna hijau daun */
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 800;
     font-size: 18px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .header-info h2 {
@@ -96,23 +97,23 @@ body {
 
 .status {
     font-size: 12px;
-    opacity: 0.9;
+    opacity: 0.95;
     display: flex;
     align-items: center;
     gap: 5px;
 }
 
-/* Titik hijau kecil status online */
+/* Status Online: Putih terang */
 .status::before {
     content: '';
     display: block;
     width: 8px;
     height: 8px;
-    background-color: #69F0AE; /* Hijau neon lembut */
+    background-color: #B9F6CA; 
     border-radius: 50%;
 }
 
-/* CHAT AREA */
+/* AREA CHAT */
 .chat-box {
     flex: 1;
     padding: 20px;
@@ -123,25 +124,15 @@ body {
     gap: 15px;
 }
 
-/* Scrollbar cantik (Chrome/Safari) */
-.chat-box::-webkit-scrollbar {
-    width: 6px;
-}
-.chat-box::-webkit-scrollbar-thumb {
-    background-color: #E0E0E0;
-    border-radius: 10px;
-}
-
 .date-divider {
     text-align: center;
     font-size: 11px;
-    color: #B0BEC5;
+    color: #90A4AE;
     margin: 10px 0;
     font-weight: 600;
-    letter-spacing: 0.5px;
 }
 
-/* BASE MESSAGE STYLE */
+/* BASE MESSAGE */
 .message {
     max-width: 80%;
     padding: 14px 18px;
@@ -149,7 +140,7 @@ body {
     font-size: 14px;
     line-height: 1.6;
     position: relative;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.03); /* Shadow super halus */
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
     animation: slideUp 0.3s ease-out;
 }
 
@@ -158,18 +149,19 @@ body {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* BOT MESSAGE: Putih Kebiruan (Sangat Bersih & Menenangkan) */
+/* BOT MESSAGE: Hijau (Healing) */
 .bot-message {
     background: var(--bot-bg);
     color: var(--bot-text);
     align-self: flex-start;
     border-bottom-left-radius: 4px;
+    border: 1px solid #C8E6C9; /* Border hijau tipis */
 }
 
-/* USER MESSAGE: Pink Lembut (Hangat & Empati) */
+/* USER MESSAGE: Pink (Warmth) */
 .user-message {
     background: var(--user-bg);
-    color: var(--user-text); /* Teks coklat tua agar mudah dibaca di background pink */
+    color: var(--user-text);
     align-self: flex-end;
     border-bottom-right-radius: 4px;
 }
@@ -186,7 +178,7 @@ body {
 .chat-input-area {
     padding: 15px 20px;
     background: var(--chat-bg);
-    border-top: 1px solid #F5F5F5;
+    border-top: 1px solid #F1F8E9;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -195,27 +187,23 @@ body {
 #user-input {
     flex: 1;
     padding: 12px 20px;
-    border: 2px solid #EEEEEE;
+    border: 2px solid #F1F8E9;
     border-radius: 50px;
     outline: none;
     font-size: 14px;
     background: var(--input-bg);
     transition: 0.3s all;
-    color: #455A64;
-}
-
-#user-input::placeholder {
-    color: #CFD8DC;
+    color: #37474F;
 }
 
 #user-input:focus {
-    border-color: var(--primary-blue);
+    border-color: var(--primary-green);
     background: #fff;
-    box-shadow: 0 0 0 3px rgba(100, 181, 246, 0.1);
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
 }
 
 #send-btn {
-    background: var(--primary-blue);
+    background: var(--primary-green);
     color: white;
     border: none;
     width: 45px;
@@ -226,14 +214,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 12px rgba(100, 181, 246, 0.4);
+    box-shadow: 0 4px 10px rgba(76, 175, 80, 0.3);
 }
 
 #send-btn:hover {
     transform: scale(1.05);
-    background: #42A5F5;
-}
-
-#send-btn svg {
-    margin-left: -2px; /* Koreksi optik agar ikon terlihat di tengah */
+    background: #43A047; /* Hijau lebih gelap saat hover */
 }
